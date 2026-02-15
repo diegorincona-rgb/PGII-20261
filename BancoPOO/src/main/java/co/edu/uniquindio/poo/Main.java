@@ -3,6 +3,7 @@ package co.edu.uniquindio.poo;
 
 import co.edu.uniquindio.poo.model.Banco;
 import co.edu.uniquindio.poo.model.CuentasBancarias.CuentaAhorros;
+import co.edu.uniquindio.poo.model.CuentasBancarias.CuentaCorriente;
 import co.edu.uniquindio.poo.model.CuentasBancarias.Estado;
 import co.edu.uniquindio.poo.model.Usuario;
 
@@ -19,8 +20,32 @@ public class Main {
         CuentaAhorros cuentaAhorros = new CuentaAhorros("1235896478", titular, 150000.0,
                 LocalDate.of(2026, 1, 21), Estado.ACTIVA);
 
+        CuentaCorriente cuentaCorriente = new CuentaCorriente("1478956213", titular, 1000000.0,
+                LocalDate.of(2026, 2, 10), Estado.ACTIVA);
+
+
+
+
+
+
+
         cuentaAhorros.mostrarInformacion();
-        cuentaAhorros.retirar(60000.0);
+        cuentaAhorros.retirar(50000.0);
         cuentaAhorros.mostrarInformacion();
+        cuentaAhorros.aplicarInteresMensual();
+        cuentaAhorros.mostrarInformacion();
+
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.retirar(50000.0);
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.cobrarComisionMensual();
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.aplicarInteresSobregiro();
+        cuentaCorriente.mostrarInformacion();
+
+
+
+
+
     }
 }
