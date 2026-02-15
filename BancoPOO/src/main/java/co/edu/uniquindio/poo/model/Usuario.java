@@ -7,14 +7,14 @@ import java.util.List;
 
 public class Usuario {
     private String nombre;
-    private int id;
+    private String id;
     private int telefono;
     private String direccion;
     private String fechaNacimiento;
 
     private List<Cuenta> listCuentasUsuario;
 
-    public Usuario(String nombre, int id, int telefono, String direccion, String fechaNacimiento) {
+    public Usuario(String nombre, String id, int telefono, String direccion, String fechaNacimiento) {
         this.nombre = nombre;
         this.id = id;
         this.telefono = telefono;
@@ -32,11 +32,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
