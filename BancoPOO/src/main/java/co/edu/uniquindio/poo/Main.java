@@ -1,5 +1,14 @@
 package co.edu.uniquindio.poo;
 
+
+import co.edu.uniquindio.poo.model.Banco;
+import co.edu.uniquindio.poo.model.CuentasBancarias.CuentaAhorros;
+import co.edu.uniquindio.poo.model.CuentasBancarias.CuentaCorriente;
+import co.edu.uniquindio.poo.model.CuentasBancarias.Estado;
+import co.edu.uniquindio.poo.model.Usuario;
+
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         Banco banco = new Banco("BANCOUNI", 125478, "Carrera 19 numero 40 - 25 Centro",

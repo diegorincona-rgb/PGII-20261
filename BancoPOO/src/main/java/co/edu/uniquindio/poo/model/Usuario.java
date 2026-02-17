@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Usuario {
     private String nombre;
-    private int id;
+    private String id;
     private int telefono;
     private String direccion;
     private LocalDate fechaNacimiento;
@@ -32,11 +32,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

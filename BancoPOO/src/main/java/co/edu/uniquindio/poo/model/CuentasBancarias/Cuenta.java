@@ -2,6 +2,8 @@ package co.edu.uniquindio.poo.model.CuentasBancarias;
 
 import co.edu.uniquindio.poo.model.Usuario;
 
+import java.time.LocalDate;
+
 public abstract class Cuenta {
     private final String numeroCuenta;
     protected Usuario titular;
