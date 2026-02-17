@@ -6,10 +6,10 @@ public abstract class Cuenta {
     private final String numeroCuenta;
     protected Usuario titular;
     protected double saldo;
-    private final String fechaApertura;
+    private final LocalDate fechaApertura;
     protected Estado estado;
 
-    public Cuenta(String numeroCuenta, Usuario titular, double saldo, String fechaApertura, Estado estado) {
+    public Cuenta(String numeroCuenta, Usuario titular, double saldo, LocalDate fechaApertura, Estado estado) {
         this.numeroCuenta = numeroCuenta;
         this.titular = titular;
         this.saldo = saldo;
@@ -62,7 +62,7 @@ public abstract class Cuenta {
         return saldo;
     }
 
-    public String getFechaApertura() {
+    public LocalDate getFechaApertura() {
         return fechaApertura;
     }
 

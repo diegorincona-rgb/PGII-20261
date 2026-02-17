@@ -1,17 +1,40 @@
 package co.edu.uniquindio.poo;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Banco banco = new Banco("BANCOUNI", 125478, "Carrera 19 numero 40 - 25 Centro",
+                318789456);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Usuario titular = new Usuario("DIEGO RINCON", "1094789450", 318862555,
+                "calle 50 Puerto Espejo","1992/11/12");
+
+        CuentaAhorros cuentaAhorros = new CuentaAhorros("1235896478", titular, 150000.0,
+                LocalDate.of(2026, 1, 21), Estado.ACTIVA);
+
+        CuentaCorriente cuentaCorriente = new CuentaCorriente("1478956213", titular, 1000000.0,
+                LocalDate.of(2026, 2, 10), Estado.ACTIVA);
+
+
+
+
+
+
+
+        cuentaAhorros.mostrarInformacion();
+        cuentaAhorros.retirar(50000.0);
+        cuentaAhorros.mostrarInformacion();
+        cuentaAhorros.aplicarInteresMensual();
+        cuentaAhorros.mostrarInformacion();
+
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.retirar(50000.0);
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.cobrarComisionMensual();
+        cuentaCorriente.mostrarInformacion();
+        cuentaCorriente.aplicarInteresSobregiro();
+        cuentaCorriente.mostrarInformacion();
+
+
+
     }
 }
